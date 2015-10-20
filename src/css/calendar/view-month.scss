@@ -1,0 +1,139 @@
+/* Weekdays header */
+
+.mg-calendar-weekdays {
+   display: flex;
+   flex-wrap: nowrap;
+}
+
+.mg-calendar-weekday {
+   box-sizing: border-box;
+   width: calc(100% / 7);
+   height: $weekdays-header-height;
+   padding: $padding;
+   line-height: $weekdays-header-height - $padding * 2;
+
+   text-align: center;
+
+   //border-right: 1px solid #E7BC66;
+
+   background-color:
+      #FFE082
+      /*
+      #FFD071
+      */
+   ;
+   color: #f0f0f0;
+   //color: #7b7e7e;
+
+   font-family: sans-serif;
+   font-weight: bold;
+   font-size: 1.1em;
+   letter-spacing: 1px;
+}
+
+.mg-calendar-weekday:last-child {
+   border-right: none;
+}
+
+/* Day cells */
+
+.mg-calendar-days {
+   display: flex;
+   flex-wrap: wrap;
+   height: calc(100% - #{$navbar-height + $weekdays-header-height});
+}
+
+.mg-calendar-day {
+   box-sizing: border-box;
+   width: calc(100% / 7);
+   height: calc(100% / 6);
+
+   padding: 1.5em 5px 5px;
+
+   border-top: 1px solid #ddd;
+   border-right: 1px solid #ddd;
+
+   position: relative;
+
+   background-color: #fcfcfc;
+   background-image: linear-gradient(#ffffff, #f6f6f6);
+   color: #7b7e7e;
+}
+
+
+.mg-calendar-day:nth-child(1),
+.mg-calendar-day:nth-child(2),
+.mg-calendar-day:nth-child(3),
+.mg-calendar-day:nth-child(4),
+.mg-calendar-day:nth-child(5),
+.mg-calendar-day:nth-child(6),
+.mg-calendar-day:nth-child(7)
+{
+   xxborder-top-color: transparent;
+}
+.mg-calendar-day:nth-child(7n+7) {
+   border-right-color: transparent;
+}
+
+.mg-calendar-day.mg-calendar-day-out-month {
+   background-color: #e8e8e8;
+   color: #c8c8c8;
+   background-image: none;
+}
+
+.mg-calendar-day:not(.mg-calendar-day-out-month):hover {
+   cursor: pointer;
+}
+
+.mg-calendar-today {
+   /*outline: 1px solid blue;*/
+   border: 1px solid #ff5e00;
+}
+
+.mg-calendar-day .mg-calendar-day-date {
+   position: absolute;
+   top: 0;
+   right: 0;
+   margin-right: 5px;
+
+   font-family: georgia;
+   font-weight: bold;
+   font-size: 0.9em;
+}
+
+// Events
+
+.mg-calendar-events {
+   list-style: none;
+   margin: 0;
+   padding: 0;
+
+   font-family: sans-serif;
+   font-size: 0.9em;
+}
+
+.mg-calendar-event {
+   display: inline-block;
+   margin-bottom: 0;//5px;
+   padding: 5px;
+   background-color: #a2c0cc;
+   color: #f0f0f0;
+   border-radius: 4px;
+   border: 2px solid #fff;
+   box-shadow: 0px 0px 1px 0px rgba(0,0,0, 0.2);
+
+   font-family: georgia;
+}
+
+.calendar .days .day .events .event:hover {
+   cursor: pointer;
+   box-shadow: 1px 1px 1px 1px rgba(0,0,0, 0.2);
+}
+
+.calendar .days .day .events .event .title {
+   margin: 0;
+   overflow: hidden;
+
+   font-family: serif;
+   font-size: 0.8em;
+}

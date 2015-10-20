@@ -1,0 +1,37 @@
+.mg-calendar-view-year-months {
+   list-style: none;
+
+   margin: 0 auto;
+   padding: 10px;
+   max-width: 960px;
+
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+}
+
+.mg-calendar-view-year-month {
+   box-sizing: border-box;
+   width: 200px;
+   height: 50px;
+
+   margin: 10px;
+
+   flex: 0 0 auto;
+
+   text-align: center;
+   line-height: 50px;
+
+   border-radius: 4px;
+
+   font-family: monospace;
+   font-size: 2em;
+
+   background-color: #a2c0cc;
+   color: #f0f0f0;
+
+   &:hover {
+      cursor: pointer;
+      font-weight: bold;
+   }
+}
